@@ -81,7 +81,7 @@ exports.decorateConfig = (config) => {
 
   // environment specifics
   if (isWin) {
-	  tabBorder = `border-bottom: 1px solid ${tabBorderColor} !important;`;
+	  tabBorder = `border-top: 1px solid ${tabBorderColor} !important;`;
     tabNoFirstChild = ':not(:first-child)';
   } else {
 	  headerBorderColor = tabBorderColor;
@@ -114,8 +114,6 @@ exports.decorateConfig = (config) => {
         left: 0;
         right: 0;
         color: ${headerForegroundColor} !important;
-        background: ${headerBackgroundColor} !important;
-        border-bottom: 1px solid ${headerBorderColor} !important;
       }
       .header_shape {
         color: ${headerForegroundColor} !important;
@@ -126,7 +124,6 @@ exports.decorateConfig = (config) => {
       }
       .tab_tab {
         border: 0;
-        background-color: ${BACKGROUND};
         ${tabBorder}
       }
       .tab_tab${tabNoFirstChild} {
@@ -139,8 +136,6 @@ exports.decorateConfig = (config) => {
       .tab_textActive {
         color: ${TAB_TEXT_COLOR};
         font-weight: 600;
-        background-color: ${BACKGROUND};
-        border-bottom: 1px solid ${TAB_BORDER_ACTIVE_COLOR} !important;
       }
       .tab_icon {
         color: ${TAB_TEXT_COLOR};
