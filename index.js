@@ -109,11 +109,27 @@ exports.decorateConfig = (config) => {
       .splitpane_divider {
         background-color: ${tabBorderColor} !important;
       }
+      .header_header {
+        background: transparent !important;
+        border-bottom: none !important;
+      }
       .header_header, .header_windowHeader {
         top: 0;
         left: 0;
         right: 0;
         color: ${headerForegroundColor} !important;
+      }
+      .tabs_list {
+        position: relative;
+      }
+      .tabs_list:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -77px;
+        width: 77px;
+        height: 100%;
+        background-color: rgba(0,0,0,0.05);
       }
       .header_shape {
         color: ${headerForegroundColor} !important;
@@ -125,6 +141,7 @@ exports.decorateConfig = (config) => {
       .tab_tab {
         border: 0;
         ${tabBorder}
+        background-color: rgba(0,0,0,0.05) !important;
       }
       .tab_tab${tabNoFirstChild} {
         border-left: 1px solid ${tabBorderColor} !important;
@@ -132,6 +149,9 @@ exports.decorateConfig = (config) => {
       .tab_text {
         color: ${TAB_TEXT_COLOR};
         font-weight: normal;
+      }
+      .tab_tab.tab_active {
+        background-color: transparent !important;
       }
       .tab_textActive {
         color: ${TAB_TEXT_COLOR};
