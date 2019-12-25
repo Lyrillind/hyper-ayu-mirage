@@ -129,7 +129,7 @@ exports.decorateConfig = (config) => {
         left: -77px;
         width: 77px;
         height: 100%;
-        background-color: rgba(0,0,0,0.05);
+        background-color: rgba(0,0,0,0.1);
       }
       .header_shape {
         color: ${headerForegroundColor} !important;
@@ -141,7 +141,7 @@ exports.decorateConfig = (config) => {
       .tab_tab {
         border: 0;
         ${tabBorder}
-        background-color: rgba(0,0,0,0.05) !important;
+        background-color: rgba(0,0,0,0.1) !important;
       }
       .tab_tab${tabNoFirstChild} {
         border-left: 1px solid ${tabBorderColor} !important;
